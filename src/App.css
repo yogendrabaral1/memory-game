@@ -1,0 +1,77 @@
+.App {
+  text-align: center;
+}
+.appHeading {
+  font-size: 30px;
+  margin: 60px 0 10px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 100px);
+}
+.inputField {
+  padding: 12px;
+  margin: 10px 0;
+  width: 200px;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #000000;
+}
+.inputField:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+.startButton {
+  border-radius: 8px;
+  padding: 12px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.noteText {
+  font-size: 14px;
+  color: #eb0c0c;
+  margin-top: 10px;
+  font-style: italic;
+}
+.memoryGameCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  column-gap: 16px;
+  row-gap: 16px;
+  max-width: 800px;
+}
+.memoryGameCards .memoryCard {
+  list-style-type: none;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #d8d8d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.memoryCard.flippedCard {
+  background-color: #e63244;
+  color: white;
+  transform: rotateY(180deg);
+  transition: all 0.5s ease;
+}
+.memoryCard.flippedCard .flipCardContent {
+  transform: rotateY(-180deg);
+  transition: all 0.5s ease;
+}
+.memoryCard.disabled {
+  pointer-events: none;
+}
